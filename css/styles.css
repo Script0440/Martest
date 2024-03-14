@@ -195,8 +195,7 @@ h4 {
     align-items: center;
   }
   .offset {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
   }
 }
 @media (min-width: 920px) {
@@ -207,8 +206,7 @@ h4 {
     font-size: 54px;
   }
   .offset {
-    margin-top: 150px;
-    margin-bottom: 150px;
+    padding-top: 120px;
   }
 }
 @media (min-width: 320px) {
@@ -311,6 +309,11 @@ h4 {
   }
   .header .menu .items .item .link {
     font-size: 16px;
+    transition: 0.3s color;
+  }
+  .header .menu .items .item .link:hover {
+    color: #00bb72;
+    transition: 0.3s color;
   }
 }
 @media (min-width: 320px) {
@@ -341,6 +344,11 @@ h4 {
     font-weight: 700;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.3s background;
+  }
+  .start .screen .buttons .btn:hover {
+    background: #191919;
+    transition: 0.3s background;
   }
   .start .screen .image {
     margin-top: 30px;
@@ -738,7 +746,7 @@ h4 {
   .about .inner .container .items .item img {
     border-radius: 20px;
     max-width: 500px;
-    width: 100%;
+    width: 50%;
     margin-bottom: 15px;
   }
   .about .inner .container .items .item .subtitle {
@@ -762,6 +770,8 @@ h4 {
   }
   .about .inner .container .items .item {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
   .about .inner .container .items .item .text {
     text-align: start;
@@ -779,13 +789,13 @@ h4 {
     margin: auto;
   }
   .about .inner .container .items .item:first-child img {
-    margin-right: 100px;
+    margin-right: 20px;
   }
   .about .inner .container .items .item:last-child {
     flex-direction: row-reverse;
   }
   .about .inner .container .items .item:last-child img {
-    margin-left: 100px;
+    margin-left: 20px;
   }
 }
 @media (min-width: 1236px) {
