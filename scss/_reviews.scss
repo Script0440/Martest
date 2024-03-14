@@ -1,0 +1,182 @@
+@media (min-width: 320px) {
+  .reviews {
+    .inner {
+      .container {
+        .reviews-info {
+          margin-top: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h4 {
+            font-size: 18px;
+            font-weight: 400;
+          }
+          h4,
+          h5 {
+            margin-bottom: 15px;
+            text-align: center;
+            max-width: 470px;
+          }
+          h5 {
+            font-weight: 100;
+            font-size: 14px;
+          }
+        }
+        .title {
+          display: flex;
+          align-items: center;
+        }
+        .title::after,
+        .title::before {
+          content: "";
+          display: block;
+          width: 100%;
+          background: #828282;
+          height: 1px;
+          border-radius: 2px;
+        }
+        .title::after {
+          margin-left: 20px;
+        }
+        .title::before {
+          margin-right: 20px;
+        }
+        .comments {
+          .swiper {
+            width: 290px;
+            height: 300px;
+            margin-top: 75px;
+            .swiper-wrapper {
+              .swiper-slide {
+                max-width: 270px;
+                padding: 20px 10px;
+                background: #fff;
+                border-radius: 20px;
+                height: 195px;
+                color: #1e1e1e;
+                .swiper-header {
+                  display: flex;
+                  align-items: center;
+                  .avatar {
+                    float: left;
+                    padding-right: 15px;
+                  }
+                }
+                .text {
+                  h4 {
+                    padding-top: 10px;
+                    font-size: 14px;
+                    line-height: 15px;
+                  }
+                }
+              }
+            }
+            .swiper-pagination-comments {
+              .swiper-pagination-bullet-active {
+                background: #fff !important;
+              }
+            }
+            .buttons {
+              display: none;
+              .button-next::after {
+                color: #fff;
+              }
+              .button-prev::after {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 920px) {
+  .reviews {
+    .inner {
+      .container {
+        padding: 16px;
+        .reviews-info {
+          flex-direction: row;
+          justify-content: space-around;
+          h5 {
+            font-weight: 400;
+          }
+        }
+        .title {
+          font-size: 54px;
+        }
+        .title::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 650px) {
+  .reviews {
+    .inner {
+      .container {
+        .comments {
+          .swiper {
+            width: 610px;
+            .swiper-wrapper {
+              height: 235px;
+              .swiper-slide {
+              }
+            }
+            .swiper-pagination-comments {
+              display: none;
+            }
+            .buttons {
+              margin-top: 40px;
+              display: flex;
+              width: 100%;
+              align-items: center;
+              align-self: center;
+              position: relative;
+              .button-next::after,
+              .button-prev::after {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1050px) {
+  .reviews {
+    .inner {
+      .container {
+        .comments {
+          .swiper {
+            width: 930px;
+            .swiper-wrapper {
+              .swiper-slide {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .reviews {
+    .inner {
+      .container {
+        .comments {
+          .swiper {
+            width: 1250px;
+            .swiper-wrapper {
+              .swiper-slide {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
