@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="inner" id="#burgerMenu">
+        <div class="container">
+          <div class="header-logo">
+            <a href="#" class="logo">
+              <img class="logo-img" src="./img/logo.png" alt="" />
+              <h4>MARTEST</h4>
+            </a>
+          </div>
+          <div class="menu">
+            <button class="btn" id="#burgerButton">
+              <div class="btn-line" id="line-1"></div>
+              <div class="btn-line" id="line-2"></div>
+              <div class="btn-line" id="line-3"></div>
+            </button>
+            <ul class="items">
+              <li class="item"><a href="#" class="link">Главная</a></li>
+              <li class="item"><a href="#catalog" class="link">Каталог</a></li>
+              <li class="item"><a href="#about" class="link">О нас</a></li>
+              <li class="item"><a href="#reviews" class="link">Отзывы</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="start offset">
+      <div class="container">
+        <div class="screen">
+          <h1 class="title">
+            <span>MARTEST</span> Подготовься <br />
+            к успешной карьере в <br />
+            море с нами!
+          </h1>
+          <h5 class="subtitle">
+            Установи приложение и сдай тест CES на максимальный <br />
+            результат
+          </h5>
+          <div class="image">
+            <img class="img" src="./img/start-screen.png" alt="" />
+          </div>
+          <a href="#catalog" class="buttons">
+            <button class="btn">Каталог</button>
+          </a>
+        </div>
+        <ul class="items">
+          <li class="item">
+            <img src="./img/screen-item-1.png" alt="" />
+            <h4 class="title">Доступность</h4>
+            <h6 class="subtitle">
+              можете получать знания из любой точки мира, имея доступ к
+              образованию без географических ограничений.
+            </h6>
+          </li>
+          <li class="item">
+            <img src="./img/screen-item-2.png" alt="" />
+            <h4 class="title">Функционал</h4>
+            <h6 class="subtitle">
+              Максимизируй свои шансы на успешный тест. Статистика ошибок,
+              избранные вопросы, обновления базы данных и многое другое.
+            </h6>
+          </li>
+          <li class="item">
+            <img src="./img/screen-item-3.png" alt="" />
+            <h4 class="title">Оптимизация</h4>
+            <h6 class="subtitle">
+              MARTEST - это не только знания, но и комфорт. Приложение
+              оптимизировано для быстрой и плавной работы, обеспечивая
+              эффективное обучение.
+            </h6>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="catalog" class="catalog offset">
+      <div class="inner">
+        <div class="container">
+          <div class="title title-after title-before">
+            <h1>Каталог</h1>
+          </div>
+          <div class="buttons">
+            <div class="branch">
+              <div class="branch-selector">
+                <select class="select" name="branch" id="branchSelectButton">
+                  <option class="option" value="branch" disabled>BRANCH</option>
+                  <option class="option" selected value="deck">DECK</option>
+                  <option class="option" value="engine">ENGINE</option>
+                </select>
+              </div>
+              <div class="branch-buttons">
+                <button
+                  class="button active"
+                  value="deck"
+                  id="branchSelectButton"
+                >
+                  DECK
+                </button>
+                <button class="button" value="engine" id="branchSelectButton">
+                  ENGINE
+                </button>
+              </div>
+            </div>
+            <div class="level">
+              <div class="level-selector">
+                <select class="select" name="level" id="levelSelectButton">
+                  <option class="option" disabled>LEVEL</option>
+                  <option class="option" selected value="support">
+                    SUPPORT
+                  </option>
+                  <option class="option" value="management">MANAGEMENT</option>
+                  <option class="option" value="operational">
+                    OPERATIONAL
+                  </option>
+                </select>
+              </div>
+              <div class="level-buttons">
+                <button
+                  class="button button-management"
+                  value="management"
+                  id="levelSelectButton"
+                >
+                  MANAGEMENT
+                </button>
+
+                <button
+                  class="button button-operational"
+                  value="operational"
+                  id="levelSelectButton"
+                >
+                  OPERATIONAL
+                </button>
+
+                <button
+                  class="button active button-support"
+                  value="support"
+                  id="levelSelectButton"
+                >
+                  SUPPORT
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-items">
+            <ul class="items" id="catalogItems"></ul>
+            <button
+              onclick='value = value == "false";'
+              value="true"
+              class="show-all-items"
+              id="showAllItemsCatalog"
+            >
+              View More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="about offset">
+      <div class="inner">
+        <div class="container">
+          <div class="title">
+            <h1>О нас</h1>
+          </div>
+          <div class="info">
+            <h4>
+              MARTEST - приложение, для тех, кто стремится к успешной карьере в
+              море.
+            </h4>
+            <h4>
+              <span>
+                Наше приложение предоставляет уникальную возможность подготовки
+                к тесту CES, сочетая в себе экономию времени, оффлайн доступ и
+                мощный функционал.</span
+              >
+            </h4>
+          </div>
+          <ul class="items">
+            <li class="item">
+              <img src="./img/abount-img-1.jpg" alt="" />
+              <div class="text">
+                <h3 class="heading">Экспертность в Морской Подготовке:</h3>
+                <h6 class="subtitle">
+                  команда профессионалов, предоставляющих высококачественную
+                  подготовку моряков к тесту CES. Мы объединяем практические
+                  навыки с академическими знаниями для достижения максимальных
+                  результатов.
+                </h6>
+              </div>
+            </li>
+            <li class="item">
+              <img src="./img/abount-img-2.jpg" alt="" />
+              <div class="text">
+                <h3 class="heading">Простота и Доступность</h3>
+                <h6 class="subtitle">
+                  Наше приложение разработано с учетом потребностей моряков. С
+                  интуитивным интерфейсом, оффлайн-режимом и обширным
+                  функционалом, MARTEST делает подготовку легкой и доступной для
+                  каждого.G
+                </h6>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="reviews" class="reviews offset">
+      <div class="inner">
+        <div class="container">
+          <div class="title">
+            <h1>Отзывы</h1>
+          </div>
+          <div class="reviews-info">
+            <h4 class="text">
+              Учиться с MARTEST стало ключом к успешному сдаче теста CES.Учиться
+              с MARTEST стало ключом к успешному сдаче теста CES.
+            </h4>
+            <h5 class="text">
+              Отзывы наших пользователей подтверждают, что наше приложение
+              помогло им достичь новых высот в морской карьере. Присоединяйся к
+              успеху с MARTEST!
+            </h5>
+          </div>
+          <div class="comments">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-header">
+                    <img class="avatar" src="./img/avatar.png" alt="" />
+                    <div class="info">
+                      <h4>Имя Фамилья</h4>
+                      <img class="stars" src="./img/star.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="text">
+                    <h4>
+                      Отзыв клиента. Используйте 1–2 предложения в 2–4 строчки.
+                      В идеале текст в отзывах должен быть одинакового веса
+                      (количество строк +- одинаковое), чтобы некоторые отзывы
+                      не казались тяжёлыми + длинные описания читает маленький
+                      процент людей
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination swiper-pagination-comments"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="buttons">
+                <div class="swiper-button-prev button-prev"></div>
+                <div class="swiper-button-next button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer offset">
+      <div class="inner">
+        <div class="container">
+          <div class="title"></div>
+          <div class="info">
+            <a href="#" class="logo">
+              <img src="./img/logo.png" alt="" />
+              <h4>MARTEST</h4>
+            </a>
+            <ul class="links">
+              <a href="#">Главная</a>
+              <a href="#about">О нас</a>
+              <a href="#catalog">Каталог</a>
+              <a href="#">Контакты</a>
+            </ul>
+            <div class="social">
+              <ul class="items">
+                <a href="#">
+                  <img src="./img/mail.png" alt="" />
+                </a>
+                <a href="#">
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.5 0C5.876 0 0.5 5.376 0.5 12C0.5 18.624 5.876 24 12.5 24C19.124 24 24.5 18.624 24.5 12C24.5 5.376 19.124 0 12.5 0ZM18.068 8.16C17.888 10.056 17.108 14.664 16.712 16.788C16.544 17.688 16.208 17.988 15.896 18.024C15.2 18.084 14.672 17.568 14 17.124C12.944 16.428 12.344 15.996 11.324 15.324C10.136 14.544 10.904 14.112 11.588 13.416C11.768 13.236 14.84 10.44 14.9 10.188C14.9083 10.1498 14.9072 10.1102 14.8968 10.0726C14.8863 10.0349 14.8668 10.0004 14.84 9.972C14.768 9.912 14.672 9.936 14.588 9.948C14.48 9.972 12.8 11.088 9.524 13.296C9.044 13.62 8.612 13.788 8.228 13.776C7.796 13.764 6.98 13.536 6.368 13.332C5.612 13.092 5.024 12.96 5.072 12.54C5.096 12.324 5.396 12.108 5.96 11.88C9.464 10.356 11.792 9.348 12.956 8.868C16.292 7.476 16.976 7.236 17.432 7.236C17.528 7.236 17.756 7.26 17.9 7.38C18.02 7.476 18.056 7.608 18.068 7.704C18.056 7.776 18.08 7.992 18.068 8.16Z"
+                      fill="#999EAD"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_43_1379)">
+                      <path
+                        d="M12.5 0C5.8725 0 0.5 5.3725 0.5 12C0.5 18.6275 5.8725 24 12.5 24C19.1275 24 24.5 18.6275 24.5 12C24.5 5.3725 19.1275 0 12.5 0ZM17.115 13.5388C17.115 13.5388 18.1763 14.5863 18.4375 15.0725C18.445 15.0825 18.4488 15.0925 18.4513 15.0975C18.5575 15.2763 18.5825 15.415 18.53 15.5187C18.4425 15.6912 18.1425 15.7763 18.04 15.7838H16.165C16.035 15.7838 15.7625 15.75 15.4325 15.5225C15.1788 15.345 14.9288 15.0537 14.685 14.77C14.3213 14.3475 14.0063 13.9825 13.6888 13.9825C13.6484 13.9824 13.6083 13.9888 13.57 14.0013C13.33 14.0788 13.0225 14.4213 13.0225 15.3338C13.0225 15.6188 12.7975 15.7825 12.6388 15.7825H11.78C11.4875 15.7825 9.96375 15.68 8.61375 14.2563C6.96125 12.5125 5.47375 9.015 5.46125 8.9825C5.3675 8.75625 5.56125 8.635 5.7725 8.635H7.66625C7.91875 8.635 8.00125 8.78875 8.05875 8.925C8.12625 9.08375 8.37375 9.715 8.78 10.425C9.43875 11.5825 9.8425 12.0525 10.1663 12.0525C10.227 12.0518 10.2866 12.0363 10.34 12.0075C10.7625 11.7725 10.6837 10.2662 10.665 9.95375C10.665 9.895 10.6637 9.28 10.4475 8.985C10.2925 8.77125 10.0287 8.69 9.86875 8.66C9.93351 8.57064 10.0188 8.49818 10.1175 8.44875C10.4075 8.30375 10.93 8.2825 11.4488 8.2825H11.7375C12.3 8.29 12.445 8.32625 12.6488 8.3775C13.0613 8.47625 13.07 8.7425 13.0338 9.65375C13.0225 9.9125 13.0113 10.205 13.0113 10.55C13.0113 10.625 13.0075 10.705 13.0075 10.79C12.995 11.2537 12.98 11.78 13.3075 11.9963C13.3502 12.023 13.3996 12.0373 13.45 12.0375C13.5638 12.0375 13.9063 12.0375 14.8338 10.4463C15.1198 9.93407 15.3684 9.40185 15.5775 8.85375C15.5963 8.82125 15.6513 8.72125 15.7163 8.6825C15.7642 8.65805 15.8174 8.6456 15.8712 8.64625H18.0975C18.34 8.64625 18.5063 8.6825 18.5375 8.77625C18.5925 8.925 18.5275 9.37875 17.5113 10.755L17.0575 11.3538C16.1363 12.5613 16.1363 12.6225 17.115 13.5388Z"
+                        fill="#999EAD"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_43_1379">
+                        <rect
+                          width="24"
+                          height="24"
+                          fill="white"
+                          transform="translate(0.5)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </ul>
+              <a href="#">support@martest.org</a>
+            </div>
+          </div>
+          <div class="author">
+            <a href="#">© 2023 Company</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/catalogItems.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+  </body>
+</html>
