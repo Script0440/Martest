@@ -59,7 +59,7 @@
             img {
               border-radius: 20px;
               max-width: 500px;
-              width: 100%;
+              width: 50%;
               margin-bottom: 15px;
             }
             .subtitle {
@@ -90,6 +90,8 @@
         .items {
           .item {
             display: flex;
+            justify-content: space-between;
+            width: 100%;
             .text {
               text-align: start;
               width: 570px;
@@ -108,13 +110,13 @@
           }
           .item:first-child {
             img {
-              margin-right: 100px;
+              margin-right: 20px;
             }
           }
           .item:last-child {
             flex-direction: row-reverse;
             img {
-              margin-left: 100px;
+              margin-left: 20px;
             }
           }
         }
