@@ -2,7 +2,7 @@ let catalog = document.getElementById("catalogItems");
 const showAllItems = document.getElementById("showAllItemsCatalog");
 const levelButton = document.querySelectorAll("#levelSelectButton");
 const branchButton = document.querySelectorAll("#branchSelectButton");
-
+const startScreenCatalog = document.getElementById("showAllItemsCatalog");
 const catalogItems = [
   {
     name: "Anchor Handling",
@@ -243,9 +243,8 @@ branchButton.forEach((item) =>
   })
 );
 
-function showItems() {
-  catalogList = filteredItems.map(
-    (item) => `
+function createINewtem(item) {
+  let newItem = `
 	<a href="#" class="item item-${item.status}">
 	 <div class="info">
 		<h3>Ces deck</h3>
@@ -258,8 +257,12 @@ function showItems() {
 	 <img src="./img/google-play.png" alt="" />
 	 </div>
 </a>
-`
-  );
+`;
+  return newItem;
+}
+
+function showItems() {
+  catalogList = filteredItems.map((item) => createINewtem(item));
 
   catalogList.length < 6
     ? (showAllItems.style.display = "none")
@@ -278,8 +281,4 @@ showAllItems.addEventListener("click", () => {
   value === "false"
     ? (catalog.innerHTML = catalogList.join(" "))
     : (catalog.innerHTML = catalogList.slice(0, 6).join(" "));
-
-  if (value === "true") {
-    window.location.href = "#catalog";
-  }
 });
