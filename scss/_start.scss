@@ -5,6 +5,7 @@
       .title {
         font-size: 22px;
         font-weight: 700;
+        line-height: 120%;
         text-align: center;
         span {
           color: #00bb72;
@@ -56,7 +57,6 @@
         max-width: 370px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         text-align: center;
         align-items: center;
         margin-bottom: 70px;
@@ -68,7 +68,6 @@
         .subtitle {
           font-size: 14px;
           font-weight: 400;
-          line-height: 16px;
         }
         img {
           width: 64px;
@@ -77,18 +76,24 @@
     }
   }
 }
-
-@media (min-width: 740px) {
+@media (min-width: 600px) {
+  .start {
+    .screen {
+      .title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media (min-width: 760px) {
   .start {
     .screen {
       display: flex;
       position: relative;
       flex-direction: column;
       align-items: flex-start;
-
       .title {
         z-index: 1;
-        font-size: 30px;
       }
       .image {
         .img {
@@ -99,10 +104,17 @@
         }
       }
     }
+    .items {
+      justify-content: space-between;
+      .item {
+        margin: 0 auto;
+        margin-bottom: 70px;
+      }
+    }
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1100px) {
   .start {
     .screen {
       display: flex;
@@ -130,7 +142,18 @@
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 1220px) {
+  .start {
+    .items {
+      align-items: stretch;
+      .item {
+        margin: 0px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1383px) {
   .start {
     .screen {
       .title {
@@ -142,9 +165,6 @@
           right: 143px;
         }
       }
-    }
-    .items {
-      justify-content: space-around;
     }
   }
 }

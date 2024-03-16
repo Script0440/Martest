@@ -30,7 +30,7 @@
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
-          h4 {
+          p {
             max-width: 500px;
             font-weight: 500;
             text-align: center;
@@ -80,7 +80,6 @@
   .about {
     .inner {
       .container {
-        padding: 16px;
         .title {
           font-size: 54px;
         }
@@ -88,16 +87,19 @@
           display: none;
         }
         .items {
+          width: 100%;
           .item {
             display: flex;
             justify-content: space-between;
-            width: 100%;
+            align-items: center;
+
             .text {
               text-align: start;
               width: 570px;
               text-align: center;
               .heading {
                 font-size: 30px;
+                margin-top: 0px;
               }
               .subtitle {
                 text-align: center;
@@ -129,10 +131,14 @@
     .inner {
       .container {
         .info {
-          width: 1200px;
-          margin: 0 auto;
           margin-bottom: 80px;
           flex-direction: row;
+          align-items: start;
+          p {
+            text-align: start;
+            margin: 0px;
+            font-size: 16px;
+          }
         }
       }
     }
@@ -145,10 +151,6 @@
         .info {
         }
         .items {
-          width: 1200px;
-          margin: 0 auto;
-          .item {
-          }
           .item:first-child {
             img {
               margin-right: 150px;
