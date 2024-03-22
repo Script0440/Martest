@@ -263,7 +263,6 @@ function createINewtem(item) {
 
 function showItems() {
   catalogList = filteredItems.map((item) => createINewtem(item));
-
   catalogList.length < 6
     ? (showAllItems.style.display = "none")
     : (showAllItems.style.display = "block");
@@ -277,7 +276,11 @@ function filtItems() {
 
 showAllItems.addEventListener("click", () => {
   let value = showAllItems.value;
-
+  if (value === "false") {
+    catalog.style.height = "2200px";
+  } else {
+    catalog.style.height = "1000px";
+  }
   value === "false"
     ? (catalog.innerHTML = catalogList.join(" "))
     : (catalog.innerHTML = catalogList.slice(0, 6).join(" "));
