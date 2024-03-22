@@ -2,7 +2,8 @@ let catalog = document.getElementById("catalogItems");
 const showAllItems = document.getElementById("showAllItemsCatalog");
 const levelButton = document.querySelectorAll("#levelSelectButton");
 const branchButton = document.querySelectorAll("#branchSelectButton");
-const startScreenCatalog = document.getElementById("showAllItemsCatalog");
+let catalogMore = document.getElementById("catalogItemsMore");
+
 const catalogItems = [
   {
     name: "Anchor Handling",
@@ -221,7 +222,27 @@ let catalogList = [];
 window.addEventListener("load", () => {
   filtItems();
   showItems();
+  catalogHeight();
 });
+
+function catalogHeight() {
+  const catalogHeightSmall = "449px";
+  const catalogHeightLarge = "1000px";
+  const catalogMoreHeightSmall = "650px";
+  const catalogMoreHeightLarge = "1200px";
+
+  if (window.innerWidth < 649) {
+    catalog.style.height = catalogHeightSmall;
+    catalogMore.classList.contains("active")
+      ? (catalogMore.style.height = catalogMoreHeightSmall)
+      : (catalogMore.style.height = "0px");
+  } else {
+    catalog.style.height = catalogHeightLarge;
+    catalogMore.classList.contains("active")
+      ? (catalogMore.style.height = catalogMoreHeightLarge)
+      : (catalogMore.style.height = "0px");
+  }
+}
 
 levelButton.forEach((item) =>
   item.addEventListener("click", (e) => {
@@ -267,21 +288,16 @@ function showItems() {
     ? (showAllItems.style.display = "none")
     : (showAllItems.style.display = "block");
   catalog.innerHTML = catalogList.slice(0, 6).join(" ");
+  catalogMore.innerHTML = catalogList.slice(6, 13).join(" ");
 }
 
 function filtItems() {
   filteredItems = catalogItems.filter((item) => item.status === catalogValue);
   filteredItems = filteredItems.filter((item) => item.branch === branchValue);
+  catalogHeight();
 }
 
 showAllItems.addEventListener("click", () => {
-  let value = showAllItems.value;
-  if (value === "false") {
-    catalog.style.height = "2200px";
-  } else {
-    catalog.style.height = "1000px";
-  }
-  value === "false"
-    ? (catalog.innerHTML = catalogList.join(" "))
-    : (catalog.innerHTML = catalogList.slice(0, 6).join(" "));
+  catalogMore.classList.toggle("active");
+  catalogHeight();
 });
