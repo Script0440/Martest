@@ -27,6 +27,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            .support-link {
+              transition: 0.3s color;
+            }
+            .support-link:hover {
+              color: #fff;
+              transition: 0.3s color;
+            }
             a {
               color: #555a65;
             }

@@ -5,6 +5,7 @@
     top: 0px;
     z-index: 10;
     background: #232323;
+    border-bottom: 1px solid #fff;
     .container {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -88,6 +89,9 @@
               display: block;
               margin-bottom: 20px;
             }
+          }
+          .item:last-child {
+            border-bottom: 0px;
           }
         }
       }
