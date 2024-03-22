@@ -70,14 +70,18 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          overflow: hidden;
+          width: 100%;
           .items {
-            height: 1000px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
             overflow: hidden;
+            align-items: flex-end;
             .item {
               cursor: pointer;
               margin-bottom: 20px;
+              height: max-content;
               .more-info {
                 display: none;
               }
@@ -122,6 +126,15 @@
                 background: #344258;
               }
             }
+          }
+          .items-more {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+          }
+
+          .items-more.active {
+            opacity: 1;
+            transition: opacity 0.5s ease;
           }
           .show-all-items {
             cursor: pointer;
@@ -180,8 +193,9 @@
           .items {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            align-items: normal;
             width: 100%;
-
             .item {
               background: #151515;
               border-radius: 20px;

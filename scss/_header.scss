@@ -5,7 +5,7 @@
     top: 0px;
     z-index: 10;
     background: #232323;
-    border-bottom: 1px solid #fff;
+    //  border-bottom: 1px solid #fff;
     .container {
       padding-top: 10px;
       padding-bottom: 10px;
@@ -56,6 +56,8 @@
       .container {
         justify-content: flex-start;
         flex-direction: column;
+        position: relative;
+
         .btn {
           transition: 0.5s all;
           float: right;
@@ -79,6 +81,7 @@
           align-items: center;
           width: 100%;
           padding-top: 50px;
+          padding-bottom: 270px;
           .item {
             margin-top: 25px;
             border-bottom: 1px solid #828282;
@@ -90,10 +93,17 @@
               margin-bottom: 20px;
             }
           }
-          .item:last-child {
-            border-bottom: 0px;
-          }
         }
+      }
+      .container::before {
+        content: "";
+        background-image: url(/img/burger-bg.png);
+        width: 320px;
+        height: 200px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
       }
     }
   }

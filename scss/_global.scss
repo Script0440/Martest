@@ -5,6 +5,11 @@ body {
   position: relative;
   height: 100%;
 }
+
+.font-Montserrat-Alternates {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
 body::after {
   content: "";
   background-image: url("../img/bg-top.png");
@@ -44,12 +49,29 @@ h4 {
   font-size: 18px;
 }
 p {
-  line-height: 24px;
+  line-height: 20px;
+}
+
+.btn-gradient {
+  border: 3px solid transparent; /*Обводка нужной толщины, но прозрачная*/
+  background: linear-gradient(
+    0deg,
+    #00cb47 0.08%,
+    #00a3b4 155.74%
+  ); /*Нужный градиент в качестве фона*/
+  box-shadow: inset 0px 0px 0px 100vw #232323; /*Тень направленная внутрь контейнера, перекрывает ненужный фон и оставляет только рамку*/
+  border-radius: 60px; /*Скругляет углы*/
+
+  /*дальше несущественно - выравнивания и отступы какие вам нужны*/
+  padding: 20px;
+  margin: 5px 0;
+  display: inline-block;
 }
 
 button {
   font-family: "montserrat";
 }
+
 .nav-link {
   font-size: 16px !important;
   transition: 0.3s color !important;
